@@ -29,16 +29,16 @@ FIXED PSEUDOCODE:
 Print_Hours_Billed_To_Project
 Print "Employee Hours Billed to Project" heading
     Read timesheet record
+	Print "Full-Time employees" sub-heading
     DOWHILE morerecords exist
-		Print "Full-Time employees" sub-heading
         IF timesheet_status = "FT" THEN
             Print EmployeeID, Department, Billing Rate, Hours Worked
         ENDIF
 		Read timesheet record
     ENDDO
+	Print "Part-Time employees" sub-heading
 	DOWHILE morerecords exist
-		Print "Part-Time employees" sub-heading
-        IF timesheet_status = "PT" THEN
+		        IF timesheet_status = "PT" THEN
             Print EmployeeID, Department, Billing Rate, Hours Worked
         ENDIF
 		Read timesheet record
