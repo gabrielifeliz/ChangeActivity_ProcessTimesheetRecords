@@ -34,12 +34,13 @@ Print "Employee Hours Billed to Project" heading
         IF timesheet_status = "FT" THEN
             Print EmployeeID, Department, Billing Rate, Hours Worked
         ENDIF
+		Read timesheet record
     ENDDO
-    Read timesheet record
 	DOWHILE morerecords exist
 		Print "Part-Time employees" sub-heading
         IF timesheet_status = "PT" THEN
             Print EmployeeID, Department, Billing Rate, Hours Worked
         ENDIF
+		Read timesheet record
     ENDDO
 END
